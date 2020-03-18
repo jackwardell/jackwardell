@@ -11,7 +11,7 @@ class Description:
 
 class Job:
     def __init__(
-        self, job_title, employer, start_date, end_date, location, description
+            self, job_title, employer, start_date, end_date, location, description
     ):
         self.job_title = job_title
         self.employer = employer
@@ -157,7 +157,7 @@ class CurriculumVitae:
     languages = ["English"]
 
     # skills
-    skills = {
+    _skills = {
         "Key Skills": [
             ("Data Engineering", 5),
             ("Software Engineering", 5),
@@ -174,8 +174,8 @@ class CurriculumVitae:
             ("CSS", 4),
             ("SQL", 5),
         ],
-        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5),],
-        "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4),],
+        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ],
+        "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
         "Software Engineering": [
             ("TDD", 4),
             ("SOLID", 4),
@@ -196,8 +196,9 @@ class CurriculumVitae:
             ("Mutual Learning", 5),
             ("DevOps", 5),
         ],
-        "Other skills": [("Chemistry", 5), ("Public Speaking", 4),],
+        "Other skills": [("Chemistry", 5), ("Public Speaking", 4), ],
     }
+    skills = {i: [k[0] for k in j] for i, j in _skills.items()}
 
 
 @app.route("/")
