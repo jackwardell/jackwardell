@@ -162,11 +162,14 @@ class CurriculumVitae:
         "Key Skills": [
             ("Data Engineering", 5),
             ("Software Engineering", 5),
-            ("AI Engineering", 4),
+            ("AI/ML Engineering", 4),
+            ("Full Stack Development", 4),
             ("Data Analysis", 4),
             ("Data Modelling", 4),
             ("Machine Learning", 4),
             ("Data Ingestion", 5),
+            ("Back End Engineering", 5),
+            ("Front End Engineering", 3),
         ],
         "Languages": [
             ("Python", 5),
