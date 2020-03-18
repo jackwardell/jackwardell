@@ -1,11 +1,7 @@
 from flask import Flask
 from flask import render_template
-from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
-app.debug = True
-app.config["SECRET_KEY"] = "<replace with a secret key>"
-toolbar = DebugToolbarExtension(app)
 
 
 class Description:
@@ -15,7 +11,7 @@ class Description:
 
 class Job:
     def __init__(
-            self, job_title, employer, start_date, end_date, location, description
+        self, job_title, employer, start_date, end_date, location, description
     ):
         self.job_title = job_title
         self.employer = employer
@@ -155,6 +151,7 @@ class CurriculumVitae:
     # languages
     languages = ["English"]
 
+    # skills
     skills = {
         "Key Skills": [
             ("Data Engineering", 5),
@@ -163,7 +160,7 @@ class CurriculumVitae:
             ("Data Analysis", 4),
             ("Data Modelling", 4),
             ("Machine Learning", 4),
-            ("Data Ingestion", 5)
+            ("Data Ingestion", 5),
         ],
         "Languages": [
             ("Python", 5),
@@ -172,17 +169,8 @@ class CurriculumVitae:
             ("CSS", 4),
             ("SQL", 5),
         ],
-        "Frameworks": [
-            ("Flask", 5),
-            ("JQuery", 3),
-            ("Vue.js", 2),
-            ("Bootstrap4", 5),
-        ],
-        "Libraries": [
-            ("Pandas", 5),
-            ("Numpy", 4),
-            ("Scikit-learn", 4),
-        ],
+        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5),],
+        "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4),],
         "Software Engineering": [
             ("TDD", 4),
             ("SOLID", 4),
@@ -192,7 +180,7 @@ class CurriculumVitae:
             ("Docker", 5),
             ("AWS", 4),
             ("Azure", 5),
-            ("Kubernetes", 3)
+            ("Kubernetes", 3),
         ],
         "Agile & Other methodologies": [
             ("Scrum", 4),
@@ -201,12 +189,9 @@ class CurriculumVitae:
             ("XP", 4),
             ("OKR", 4),
             ("Mutual Learning", 5),
-            ("DevOps", 5)
+            ("DevOps", 5),
         ],
-        "Other skills": [
-            ("Chemistry", 5),
-            ("Public Speaking", 4),
-        ]
+        "Other skills": [("Chemistry", 5), ("Public Speaking", 4),],
     }
 
 
@@ -216,4 +201,4 @@ def curriculum_vitae():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
