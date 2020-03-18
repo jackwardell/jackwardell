@@ -186,6 +186,7 @@ class CurriculumVitae:
             ("Docker", 5),
             ("AWS", 4),
             ("Azure", 5),
+            ("Heroku", 5),
             ("Kubernetes", 3),
         ],
         "Agile & Other methodologies": [
