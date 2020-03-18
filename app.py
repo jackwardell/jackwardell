@@ -40,11 +40,19 @@ class CurriculumVitae:
     phone_number = "+44 7868 118 271"
     job_title = "Data Engineer / Software Engineer / AI Engineer / Technologist"
     nationality = "British National"
+    links = [
+        ("https://www.jackwardell.co.uk", "Home"),
+        ("https://github.com/jackwardell", "Github"),
+        ("https://www.linkedin.com/in/jack-wardell-london/", "LinkedIn"),
+        ("https://medium.com/@jackwardell", "Medium"),
+        ("https://www.antipodecoefficient.com/", "Antipode Coefficient"),
+    ]
 
     # personal summary
     summary = """I am an enthusiastic software developer who genuinely derives pleasure from 
     learning and building. I am motivated by an innate curiosity and a desire to master my technologies.
-    I consider myself an engineer first """
+    I believe in agile delivery and as such that customer collaboration is key to 
+    developing a successful product."""
 
     # job history
     jobs = [

@@ -21,6 +21,16 @@
 
         <hr>
 
+        <div class="nav-scroller my-0">
+            <nav class="nav d-flex justify-content-between my-0">
+                {% for link in cv.links %}
+                    <a class="p-2" target="_blank" href="{{ link[0] }}">{{ link[1] }}</a>
+                {% endfor %}
+            </nav>
+        </div>
+
+        <hr>
+
         <div class="row">
             <div class="col text-center">
                 <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
