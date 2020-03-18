@@ -47,7 +47,7 @@ class CurriculumVitae:
     # personal summary
     summary = """I am an enthusiastic software developer who genuinely derives pleasure from 
     learning and building. I am motivated by an innate curiosity and a desire to master my technologies.
-    I believe in agile delivery and as such that customer collaboration is key to 
+    I believe in agile delivery and as such, that customer collaboration is key to 
     developing a successful product."""
 
     # job history
@@ -95,7 +95,7 @@ class CurriculumVitae:
                         "Databases: PostgreSQL, Redis, Azure Datalake Store",
                         "Cloud: Azure",
                         "Front End: HTML, CSS, Javascript, JQuery, Bootstrap4",
-                        "Agile: Lean Startup, Mutual Learning, Scrum, Kanban",
+                        "Agile: Scrum, Kanban (ScrumBan), Lean Startup, Mutual Learning",
                         "Other: Jira, Slack, ACT, RFT",
                     ],
                     "Internally awarded prizes within Shell:",
@@ -115,7 +115,7 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """For 4 months I was rigorously trained on - site in the
+                    """For 4 months I was rigorously trained on-site in the
                     discipline of big data engineering. In this bootcamp I
                     learnt technical skills and soft skills for business.
                     Including but not limited to:""",
@@ -170,10 +170,10 @@ class CurriculumVitae:
         ],
         "Languages": [
             ("Python", 5),
-            ("Javascript", 3),
+            ("SQL", 5),
             ("HTML", 5),
             ("CSS", 4),
-            ("SQL", 5),
+            ("Javascript", 3),
         ],
         "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ],
         "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
