@@ -22,7 +22,7 @@ class Job:
 
 
 class Education:
-    def __init__(self, institution, date, location, description, degree=None):
+    def __init__(self, institution, location, description, date=None, degree=None):
         self.institution = institution
         self.date = date
         self.location = location
@@ -56,7 +56,7 @@ class CurriculumVitae:
             "AI Engineer",
             "Shell",
             "Dec 2019",
-            "Jun 2020",
+            "Present",
             "London",
             Description(
                 lines=[
@@ -77,7 +77,8 @@ class CurriculumVitae:
                     """On-site consultant at Shell working as a data engineer. 
                     During this time, in a team, we delivered a tool for internal customers.
                     Using ScrumBan and a lean startup approach, I interacted with customers 
-                    weekly to understand their pain and to build features they actually wanted.""",
+                    weekly to understand their pain and therefore their requirements. 
+                    We used this instruction to build features they actually wanted.""",
                     "Delivered:",
                     [
                         "A CI/CD pipeline",
@@ -115,7 +116,7 @@ class CurriculumVitae:
             Description(
                 lines=[
                     """For 4 months I was rigorously trained on - site in the
-                    discipline of big data engineering.In this bootcamp I
+                    discipline of big data engineering. In this bootcamp I
                     learnt technical skills and soft skills for business.
                     Including but not limited to:""",
                     [
@@ -135,7 +136,7 @@ class CurriculumVitae:
     education = [
         Education(
             "UCL",
-            "2018",
+            # "2018",
             "London",
             Description(
                 lines=[
@@ -143,11 +144,11 @@ class CurriculumVitae:
                     """4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof. Andrew Wills""",
                 ]
             ),
-            "MSci Chemistry, 2.1",
+            degree="MSci Chemistry, 2.1",
         ),
         Education(
             "Abingdon School",
-            "2013",
+            # "2013",
             "Oxford",
             Description(lines=["Chemistry A*, Maths A*, Further Maths B, Art A"]),
         ),
