@@ -143,9 +143,14 @@ class CurriculumVitae:
                     """4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof. Andrew Wills""",
                 ]
             ),
-            "MSci Chemistry",
+            "MSci Chemistry, 2.1",
         ),
-        Education("Abingdon School", "2013", "Oxford", Description),
+        Education(
+            "Abingdon School",
+            "2013",
+            "Oxford",
+            Description(lines=["Chemistry A*, Maths A*, Further Maths B, Art A"]),
+        ),
     ]
 
     # languages

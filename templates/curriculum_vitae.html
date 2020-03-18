@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Jack Wardell</title>
+    <link rel="shortcut icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
     <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -109,10 +111,10 @@
         <div class="row">
             {% for skill_group, skills in cv.skills.items() %}
                 <div class="col-md-2">
-                    <p>{{ skill_group }}:</p>
                 </div>
                 <div class="col-md-10">
                     <p>
+                        <strong>{{ skill_group }}:</strong>
                         {% for skill in skills %}
                             {{ skill[0] }},
                         {% endfor %}
