@@ -15,7 +15,7 @@ class Description:
 
 class Job:
     def __init__(
-        self, job_title, employer, start_date, end_date, location, description
+            self, job_title, employer, start_date, end_date, location, description
     ):
         self.job_title = job_title
         self.employer = employer
@@ -97,7 +97,7 @@ class CurriculumVitae:
                         "CD: Azure Web App, Kubernetes, VMs",
                         "Databases: PostgreSQL, Redis, Azure Datalake Store",
                         "Cloud: Azure",
-                        "Front End: HTML, CSS, Javascript, JQuery",
+                        "Front End: HTML, CSS, Javascript, JQuery, Bootstrap4",
                         "Agile: Lean Startup, Mutual Learning, Scrum, Kanban",
                         "Other: Jira, Slack, ACT, RFT",
                     ],
@@ -143,8 +143,8 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """3rd Year dissertation on ‘Structural Defects in Metal–Organic Frameworks’ under Prof.Ben Slater""",
-                    """4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof.Andrew Wills""",
+                    """3rd Year dissertation on ‘Structural Defects in Metal–Organic Frameworks’ under Prof. Ben Slater""",
+                    """4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof. Andrew Wills""",
                 ]
             ),
             "MSci Chemistry",
@@ -154,6 +154,60 @@ class CurriculumVitae:
 
     # languages
     languages = ["English"]
+
+    skills = {
+        "Key Skills": [
+            ("Data Engineering", 5),
+            ("Software Engineering", 5),
+            ("AI Engineering", 4),
+            ("Data Analysis", 4),
+            ("Data Modelling", 4),
+            ("Machine Learning", 4),
+            ("Data Ingestion", 5)
+        ],
+        "Languages": [
+            ("Python", 5),
+            ("Javascript", 3),
+            ("HTML", 5),
+            ("CSS", 4),
+            ("SQL", 5),
+        ],
+        "Frameworks": [
+            ("Flask", 5),
+            ("JQuery", 3),
+            ("Vue.js", 2),
+            ("Bootstrap4", 5),
+        ],
+        "Libraries": [
+            ("Pandas", 5),
+            ("Numpy", 4),
+            ("Scikit-learn", 4),
+        ],
+        "Software Engineering": [
+            ("TDD", 4),
+            ("SOLID", 4),
+            ("APIs", 5),
+            ("Linux", 4),
+            ("Git", 5),
+            ("Docker", 5),
+            ("AWS", 4),
+            ("Azure", 5),
+            ("Kubernetes", 3)
+        ],
+        "Agile & Other methodologies": [
+            ("Scrum", 4),
+            ("Kanban", 5),
+            ("Lean Startup", 4),
+            ("XP", 4),
+            ("OKR", 4),
+            ("Mutual Learning", 5),
+            ("DevOps", 5)
+        ],
+        "Other skills": [
+            ("Chemistry", 5),
+            ("Public Speaking", 4),
+        ]
+    }
 
 
 @app.route("/")
