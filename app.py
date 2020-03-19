@@ -32,8 +32,6 @@ class Education:
 
 class CurriculumVitae:
     name = "Jack Wardell"
-    email_address = "jackwardell@me.com"
-    phone_number = "+44 7868 118 271"
     job_title = "Data Engineer / Software Engineer / AI Engineer / Technologist"
     nationality = "British National"
     links = [
@@ -60,9 +58,9 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """A continuation of my previous role as a Data Engineer with a greater 
+                    """Changing role into a new team A continuation of my previous role as a Data Engineer with a greater 
                     focus on modeling and productionising data science work.""",
-                    "During this time I completed the Udacity course: Introduction to Machine Learning",
+                    # "During this time I completed the Udacity course: Introduction to Machine Learning",
                 ]
             ),
         ),
@@ -111,7 +109,7 @@ class CurriculumVitae:
             "Big Data Engineer",
             "Kubrick Group",
             "Feb 2018",
-            "Jun 2020",
+            "Present",
             "London",
             Description(
                 lines=[
@@ -178,7 +176,7 @@ class CurriculumVitae:
             ("CSS", 4),
             ("Javascript", 3),
         ],
-        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ],
+        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ("Jinja2", 5)],
         "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
         "Software Engineering": [
             ("TDD", 4),

@@ -20,6 +20,9 @@
                 <h1 class="special-font">{{ cv.name }}</h1>
                 <h4 class="special-font">{{ cv.job_title }}</h4>
             </div>
+            <div class="text-center">
+                <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
+            </div>
         </div>
 
         <hr>
@@ -34,16 +37,6 @@
 
         <hr>
 
-        <div class="row">
-            <div class="col text-center">
-                <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
-                <h5>{{ cv.email_address }} / {{ cv.phone_number }}</h5>
-                <h5>{{ cv.nationality }}</h5>
-            </div>
-        </div>
-
-        <hr>
-
         <h5 class="section-title">Profile</h5>
         <div class="row">
             <div class="col-md-2">
@@ -51,7 +44,9 @@
             </div>
             <div class="col-md-10">
                 <p>{{ cv.summary }}</p>
+
             </div>
+
             {#            <div class="col-md-2">#}
             {#                Languages#}
             {#            </div>#}
@@ -60,25 +55,6 @@
             {#                    <p>{{ language }}</p>#}
             {#                {% endfor %}#}
             {#            </div>#}
-        </div>
-
-        <hr>
-
-        <h5 class="section-title">Education</h5>
-        <div class="row">
-            {% for education in cv.education %}
-                <div class="col-md-2">
-                    {#                    <p >{{ education.date }}</p>#}
-                </div>
-                <div class="col-md-10">
-                    <h5>{{ education.institution }}{% if education.degree %}, {{ education.degree }}{% endif %}</h5>
-                    <p>{{ education.location }}</p>
-                    {% for line in education.description.lines %}
-                        <p>{{ line }}</p>
-                    {% endfor %}
-                <br>
-                </div>
-            {% endfor %}
         </div>
 
         <hr>
@@ -102,6 +78,25 @@
                         {% else %}
                             <p>{{ line }}</p>
                         {% endif %}
+                    {% endfor %}
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h5 class="section-title">Education</h5>
+        <div class="row">
+            {% for education in cv.education %}
+                <div class="col-md-2">
+                    {#                    <p >{{ education.date }}</p>#}
+                </div>
+                <div class="col-md-10">
+                    <h5>{{ education.institution }}{% if education.degree %}, {{ education.degree }}{% endif %}</h5>
+                    <p>{{ education.location }}</p>
+                    {% for line in education.description.lines %}
+                        <p>{{ line }}</p>
                     {% endfor %}
                     <br>
                 </div>
