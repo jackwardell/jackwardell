@@ -58,7 +58,8 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """Changing role into a new team A continuation of my previous role as a Data Engineer with a greater 
+                    """I changed roles in the new year into a new team but in the same product. 
+                    The new role combines my previous role as a Data Engineer with a greater 
                     focus on modeling and productionising data science work.""",
                     # "During this time I completed the Udacity course: Introduction to Machine Learning",
                 ]
