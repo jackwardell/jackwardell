@@ -93,7 +93,7 @@ class CurriculumVitae:
                         "CD: Azure Web App, Kubernetes, VMs",
                         "Databases: PostgreSQL, Redis, Azure Datalake Store",
                         "Cloud: Azure",
-                        "Front End: HTML, CSS, Javascript, JQuery, Bootstrap4",
+                        "Front End: HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4",
                         "Agile: Scrum, Kanban (ScrumBan), Lean Startup, Mutual Learning",
                         "Other: Jira, Slack, ACT, RFT",
                     ],
