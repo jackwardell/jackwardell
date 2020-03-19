@@ -177,8 +177,7 @@ class CurriculumVitae:
             ("CSS", 4),
             ("Javascript", 3),
         ],
-        "Frameworks": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ("Jinja2", 5)],
-        "Libraries": [("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
+        "Frameworks & Libraries": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ("Jinja2", 5), ("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
         "Software Engineering": [
             ("TDD", 4),
             ("SOLID", 4),
@@ -191,7 +190,7 @@ class CurriculumVitae:
             ("Heroku", 5),
             ("Kubernetes", 3),
         ],
-        "Agile & Other methodologies": [
+        "Agile & Other Methodologies": [
             ("Scrum", 4),
             ("Kanban", 5),
             ("Lean Startup", 4),
