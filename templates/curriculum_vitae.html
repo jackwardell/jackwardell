@@ -123,6 +123,26 @@
 
         <br>
 
+        <hr>
+
+        <h5 class="section-title">Personal</h5>
+        <div class="row">
+            {% for thing in cv.personal %}
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        <strong>{{ thing.name }}:</strong> {{ thing.description }}
+                        {% if thing.skills_used %}
+                            <span class="my-2">Skills used: {{ thing.skills_used | join(", ") }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <br>
+
     </div>
 </div>
 </body>

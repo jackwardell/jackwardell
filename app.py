@@ -11,7 +11,7 @@ class Description:
 
 class Job:
     def __init__(
-            self, job_title, employer, start_date, end_date, location, description
+        self, job_title, employer, start_date, end_date, location, description
     ):
         self.job_title = job_title
         self.employer = employer
@@ -28,6 +28,13 @@ class Education:
         self.location = location
         self.description = description
         self.degree = degree
+
+
+class Personal:
+    def __init__(self, name, description, skills_used=None):
+        self.name = name
+        self.description = description
+        self.skills_used = skills_used
 
 
 class CurriculumVitae:
@@ -177,7 +184,16 @@ class CurriculumVitae:
             ("CSS", 4),
             ("Javascript", 3),
         ],
-        "Frameworks & Libraries": [("Flask", 5), ("JQuery", 3), ("Vue.js", 2), ("Bootstrap4", 5), ("Jinja2", 5), ("Pandas", 5), ("Numpy", 4), ("Scikit-learn", 4), ],
+        "Frameworks & Libraries": [
+            ("Flask", 5),
+            ("JQuery", 3),
+            ("Vue.js", 2),
+            ("Bootstrap4", 5),
+            ("Jinja2", 5),
+            ("Pandas", 5),
+            ("Numpy", 4),
+            ("Scikit-learn", 4),
+        ],
         "Software Engineering": [
             ("TDD", 4),
             ("SOLID", 4),
@@ -199,9 +215,64 @@ class CurriculumVitae:
             ("Mutual Learning", 5),
             ("DevOps", 5),
         ],
-        "Other skills": [("Chemistry", 5), ("Public Speaking", 4), ],
+        "Other skills": [("Chemistry", 5), ("Public Speaking", 4),],
     }
     skills = {i: [k[0] for k in j] for i, j in _skills.items()}
+
+    personal = [
+        Personal(
+            "Antipode Coefficent",
+            """Built a small website to calculate the antipode coefficient 
+            between two points. The basic idea is that two points can be 
+            described with a number between 0 and 1 where 1 represents a place
+            being perfectly opposite on the globe.""",
+            [
+                "Flask",
+                "SQLAlchemy",
+                "Alembic",
+                "PostgreSQL",
+                "Heroku",
+                "Mapbox",
+                "geopy",
+                "gunicorn",
+                "click",
+                "Bootstrap4",
+                "pytest",
+                "TDD",
+                "Github",
+                "JQuery",
+            ],
+        ),
+        Personal(
+            "Udacity Course On ML",
+            """Completed multiple projects on supervised and unsupervised 
+            learning, with sklearn and pytorch.""",
+            [
+                "Ensemble models",
+                "Bayesian models",
+                "SVMs",
+                "Image classifiers",
+                "PCA",
+                "scikit-learn",
+                "pytorch",
+                "matplotlib",
+                "seaborn",
+                "pandas",
+                "numpy",
+            ],
+        ),
+        Personal("Flask Contributor", """Minor contributions to Flask."""),
+        Personal(
+            "Gardening & Horticulture",
+            """I enjoy growing plants and identifying trees. Currently growing 
+            multiple flowers, plants and trees.""",
+        ),
+        Personal(
+            "History",
+            """I love learning and reading about history, particularly human 
+            history, ancient history and English history.""",
+        ),
+    ]
 
 
 @app.route("/")
