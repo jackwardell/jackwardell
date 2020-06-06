@@ -164,6 +164,9 @@ class CurriculumVitae:
     languages = ["English"]
 
     # skills
+    # todo: better formatting
+    # initial intention was a star rating
+    # however haven't decided on its implementation yet
     _skills = {
         "Key Skills": [
             ("Data Engineering", 5),
