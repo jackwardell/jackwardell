@@ -39,21 +39,47 @@ class Personal:
 
 class CurriculumVitae:
     name = "Jack Wardell"
-    job_title = "Data Engineer / Software Engineer / AI Engineer / Technologist"
+    job_title = "Data Engineer / Software Engineer / AI Engineer"
     nationality = "British National"
     links = [
         ("https://www.jackwardell.co.uk", "Home"),
         ("https://github.com/jackwardell", "Github"),
         ("https://www.linkedin.com/in/jack-wardell-london/", "LinkedIn"),
-        ("https://medium.com/@jackwardell", "Medium"),
+        # ("https://medium.com/@jackwardell", "Medium"),
         ("https://www.antipodecoefficient.com/", "Antipode Coefficient"),
     ]
 
     # personal summary
-    summary = """I am an enthusiastic software developer who genuinely derives pleasure from 
+    summary = """I am an enthusiastic software developer who genuinely derives pleasure from
     learning and building. I am motivated by an innate curiosity and a desire to master my technologies.
-    I believe in agile delivery and as such, that customer collaboration is key to 
-    developing a successful product."""
+    I believe in agile delivery and as such, that customer collaboration is key to
+    developing a successful product and delivering value to both the customer and business."""
+
+    values = [
+        "Simplicity",
+        "Courage",
+        "Respect",
+        "Compassion",
+        "Curiosity",
+        "Transparency",
+        "Customer collaboration",
+        "Feedback & adapting to change",
+    ]
+
+    looking_for = [
+        "Building software mainly in Python",
+        "A highly collaborative, cross-functional agile team",
+        "A non-hierarchical and physiologically safe working environment",
+        "An exciting product",
+    ]
+
+    offering = [
+        "My broad spectra of data and software engineering skills",
+        "Loyalty and kindness towards my colleagues",
+        "Dedication to delivering value to the customer and therefore the business",
+        "A desire for regular customer engagements",
+        "Knowledge sharing / training within the team",
+    ]
 
     # job history
     jobs = [
@@ -65,8 +91,8 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """I changed roles in the new year into a new team but in the same product. 
-                    The new role is similar to my previous role as a Data Engineer, but with a greater 
+                    """I changed roles in the new year into a new team but in the same product.
+                    The new role is similar to my previous role as a Data Engineer, but with a greater
                     focus on modeling, productionising data science work in kubernetes and building pipelines.""",
                     # "During this time I completed the Udacity course: Introduction to Machine Learning",
                 ]
@@ -80,10 +106,10 @@ class CurriculumVitae:
             "London",
             Description(
                 lines=[
-                    """On-site consultant at Shell working as a data engineer. 
+                    """On-site consultant at Shell working as a data engineer.
                     During this time, in a team, we delivered a tool for internal customers.
-                    Using ScrumBan and a lean startup approach, I interacted with customers 
-                    weekly to understand their pain and therefore their requirements. 
+                    Using ScrumBan and a lean startup approach, I interacted with customers
+                    weekly to understand their pain and therefore their requirements.
                     We used this instruction to build features they actually wanted.""",
                     "Delivered:",
                     [
@@ -225,8 +251,8 @@ class CurriculumVitae:
     personal = [
         Personal(
             "Antipode Coefficent",
-            """Built a small website to calculate the antipode coefficient 
-            between two points. The basic idea is that two points can be 
+            """Built a small website to calculate the antipode coefficient
+            between two points. The basic idea is that two points can be
             described with a number between 0 and 1 where 1 represents a place
             being perfectly opposite on the globe.""",
             [
@@ -248,7 +274,7 @@ class CurriculumVitae:
         ),
         Personal(
             "Udacity Course On ML",
-            """Completed multiple projects on supervised and unsupervised 
+            """Completed multiple projects on supervised and unsupervised
             learning, with sklearn and pytorch.""",
             [
                 "Ensemble models",
@@ -264,15 +290,18 @@ class CurriculumVitae:
                 "numpy",
             ],
         ),
-        Personal("Flask Contributor", """Minor contributions to Flask."""),
         Personal(
-            "Gardening & Horticulture",
-            """I enjoy growing plants and identifying trees. Currently growing 
-            multiple flowers, plants and trees.""",
+            "Open source contributor",
+            """A few packages on pip, contributions to Flask, many repos and projects on GitHub""",
+        ),
+        Personal(
+            "Gardening, Botany, Horticulture & Bonsai",
+            """I enjoy growing plants and identifying trees. Currently growing
+            multiple flowers, plants and trees. This summer I went wild tree hunting, potting up saplings from the forest, in preparation to bonsai.""",
         ),
         Personal(
             "History",
-            """I love learning and reading about history, particularly human 
+            """I love learning and reading about history, particularly human
             history, ancient history and English history.""",
         ),
     ]

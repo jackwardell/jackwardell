@@ -7,11 +7,25 @@
     <link rel="shortcut icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
     <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
-    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}?sdssssd">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
+<style>
+    @page {
+        size: Letter; /* Change from the default size of A4 */
+        margin: 2.5cm; /* Set margin on each page */
+    }
+
+    body {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+    }
+
+</style>
 <body>
 <div class="container">
     <div class="col-12">
@@ -23,7 +37,11 @@
             <div class="text-center">
                 <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
             </div>
+            <div class="text-center">
+                CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a>
+            </div>
         </div>
+
 
         <hr>
 
@@ -39,23 +57,45 @@
 
         <h5 class="section-title">Profile</h5>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-sm-2">
                 About Me
             </div>
-            <div class="col-md-10">
+            <div class="col-sm-10">
                 <p>{{ cv.summary }}</p>
-
             </div>
 
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10">
+                <p>What I'm looking for:</p>
+                <ul>
+                    {% for thing in cv.looking_for %}
+                        <li>{{ thing }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p>What I'm offering:</p>
+                <ul>
+                    {% for thing in cv.offering %}
+                        <li>{{ thing }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p>My values:</p>
+                <ul>
+                    {% for value in cv.values %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
             {#            <div class="col-md-2">#}
-            {#                Languages#}
+            {#                What I'm looking for#}
             {#            </div>#}
             {#            <div class="col-md-10">#}
-            {#                {% for language in cv.languages %}#}
-            {#                    <p>{{ language }}</p>#}
-            {#                {% endfor %}#}
+            {##}
             {#            </div>#}
         </div>
+
 
         <hr>
 
