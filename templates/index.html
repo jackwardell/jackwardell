@@ -8,9 +8,7 @@
     <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
     <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -43,12 +41,15 @@
     </div>
     <hr>
     <section>
-        <h5 class="section-title">Profile</h5>
+        <h5 class="section-title"><strong>Profile</strong></h5>
         <div class="my-3">
             <h6 class="section-subtitle"><i>One-liner</i></h6>
-            <p>I am an enthusiastic software developer who genuinely derives
-                pleasure from learning and building, and am motivated by an innate
-                curiosity and a desire to master my technologies.</p>
+            <ul>
+                <li>I am an enthusiastic software developer who genuinely derives
+                    pleasure from learning and building, and am motivated by an innate
+                    curiosity and a desire to master my technologies.
+                </li>
+            </ul>
         </div>
         <div class="my-3">
             <h6 class="section-subtitle"><i>About me</i></h6>
@@ -56,7 +57,8 @@
                 <li class="my-2">Python developer and software engineer - specialising in data engineering (e.g. Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres)</li>
                 <li class="my-2">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask</li>
                 <li class="my-2">Lots of experience in data ingestion (e.g. scraping, REST APIs, etc), mission-critical applications, end-to-end testing (e.g. Selenium), CI/CD and microservices</li>
-                <li class="my-2">Extensive knowledge of Agile frameworks (e.g. Kanban, SCRUM, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
+                <li class="my-2">Extensive knowledge of Agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
+                <li class="my-2">Proponent of end-to-end testing, TDD, DDD, kanban & mutual learning</li>
                 <li class="my-2">Values: simplicity, courage, respect, compassion, curiosity, transparency, customer collaboration, feedback & adapting to change</li>
             </ul>
         </div>
@@ -71,42 +73,128 @@
         </div>
     </section>
     <section class="my-5">
-        <h5 class="section-title">Employment History</h5>
-        <ul>
-            <li class="py-2">AI Engineer at Shell, Dec 2019 - Present, London
-                <ul>
-                    <li class="my-1">Role: On-site consultant AI engineer</li>
-                </ul>
-            </li>
-            <li class="py-2">Data Engineer at Shell, June 2018 - Dec 2019, London
-                <ul>
-                    <li class="my-1">Role: On-site consultant data engineer, joined the team at the inception of the product</li>
-                    <li class="my-1">Team: ScrumBan Agile team, using lean start-up approach with weekly customer collaboration</li>
-                    <li class="my-1">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
-                    <li class="my-1">Delivered:
-                        <ul>
-                            <li>Version control & CI/CD pipeline</li>
-                            <li>Data ingestion from multiple sources, processing & storage</li>
-                            <li>Machine learning models, deployed on Azure</li>
-                            <li>A mission-critical advanced web application</li>
-                            <li>Migration of monolithic codebase to microservices in kubernetes</li>
-                        </ul>
-                    </li>
-                    <li class="my-1">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, SCRUM, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT, RFT</li>
-                    <li class="my-1">Internally awarded prizes within Shell: Code Masters Award, Downstream Directors Award, Chemicals: Increasing profitability in our base business</li>
-                </ul>
-            </li>
-            <li class="py-2">Big Data Engineer at Kubrick Group, Feb 2018 - Present, London
-                <ul>
-                    <li class="my-1">Role: Rigorously trained on-site in the discipline of big data engineering. In this bootcamp I learnt technical, business and soft skills</li>
-                    <li class="my-1">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <h5 class="section-title"><strong>Employment History</strong></h5>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>AI Engineer at Shell:</i> Dec 2019 - Present, London</h6>
+            <ul>
+                <li class="my-1">Role: Promotion from previous role after extensive training in machine learning (e.g Udacity)</li>
+                <li class="my-1">Team: Same team</li>
+                <li class="my-2">Delivered:
+                    <ul>
+                        <li>Ad-hoc model creation in kubernetes</li>
+                        <li>Feature selection, hyperparameter tuning and model optimisation in the cloud</li>
+                        <li>A self-service mission critical application that allows users to build machine learning models with a UI</li>
+                        <li>Migration of monolithic codebase to microservices in kubernetes</li>
+                    </ul>
+                </li>
+                <li class="my-2">Stack: (as well as below), Kubernetes, Celery, </li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Data Engineer at Shell:</i> June 2018 - Dec 2019, London</h6>
+            <ul>
+                <li class="my-2">Role: On-site consultant data engineer</li>
+                <li class="my-2">Team: ScrumBan Agile team, using lean start-up approach with weekly customer collaboration. Joined at inception 2+ years ago</li>
+                <li class="my-2">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
+                <li class="my-2">Delivered:
+                    <ul>
+                        <li>Version control & CI/CD pipeline</li>
+                        <li>Data ingestion from multiple sources, processing & storage</li>
+                        <li>Machine learning models, deployed on Azure</li>
+                        <li>A mission-critical advanced web application</li>
+                    </ul>
+                </li>
+                <li class="my-2">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Docker, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, SCRUM, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT, RFT</li>
+                <li class="my-2">Internally awarded prizes within Shell: Code Masters Award, Downstream Directors Award, Chemicals: Increasing profitability in our base business</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Big Data Engineer at Kubrick Group:</i> Feb 2018 - Present, London</h6>
+            <ul>
+                <li class="my-2">Role: Rigorously trained on-site in the discipline of big data engineering. In this bootcamp I learnt technical, business and soft skills</li>
+                <li class="my-2">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
+                </li>
+            </ul>
+        </div>
     </section>
     <section class="my-5">
-
+        <h5 class="section-title"><strong>Education</strong></h5>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>UCL:</i> 2.1 Chemistry MSci, London</h6>
+            <ul>
+                <li class="my-1">3rd Year dissertation on ‘Structural Defects in Metal–Organic Frameworks’ under Prof. Ben Slater</li>
+                <li class="my-1">4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof. Andrew Wills</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Abingdon School:</i> Chemistry A*, Maths A*, Further Maths B, Art A, Oxford</h6>
+        </div>
+    </section>
+    <section class="my-5">
+        <h5 class="section-title"><strong>Skills</strong></h5>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Key Skills:</i></h6>
+            <ul>
+                <li class="my-1">Data Engineering, Software Engineering, AI/ML Engineering, Full Stack Development, Data Analysis, Data Modelling, Machine Learning, Data Ingestion, Back End Engineering, Front End Engineering</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Languages:</i></h6>
+            <ul>
+                <li class="my-1">Python, SQL, HTML, CSS, Javascript</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Frameworks & Libraries:</i></h6>
+            <ul>
+                <li class="my-1">Flask, JQuery, Vue.js, Bootstrap4, Jinja2, Pandas, Numpy, Scikit-learn</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Software Engineering:</i></h6>
+            <ul>
+                <li class="my-1">TDD, SOLID, APIs, Linux, Git, Docker, AWS, Azure, Heroku, Kubernetes</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Agile & Other Methodologies:</i></h6>
+            <ul>
+                <li class="my-1">Scrum, Kanban, Lean Startup, XP, OKR, Mutual Learning, DevOps</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Other skills:</i></h6>
+            <ul>
+                <li class="my-1">Chemistry, Public Speaking</li>
+            </ul>
+        </div>
+    </section>
+    <section class="my-5">
+        <h5 class="section-title"><strong>Personal</strong></h5>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Antipode Coefficent:</i></h6>
+            <ul>
+                <li class="my-1">Built a small website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1 where 1 represents a place being perfectly opposite on the globe. Skills used: Flask, SQLAlchemy, Alembic, PostgreSQL, Heroku, Mapbox, geopy, gunicorn, click, Bootstrap4, pytest, TDD, Github, JQuery</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Udacity Course On ML:</i></h6>
+            <ul>
+                <li class="my-1">Completed multiple projects on supervised and unsupervised learning, with sklearn and pytorch. Skills used: Ensemble models, Bayesian models, SVMs, Image classifiers, PCA, scikit-learn, pytorch, matplotlib, seaborn, pandas, numpy</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Open source contributor:</i></h6>
+            <ul>
+                <li class="my-1"> A few packages on pip, contributions to Flask, many repos and projects on GitHub</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>Gardening, Botany, Horticulture & Bonsai:</i></h6>
+            <ul>
+                <li class="my-1">I enjoy growing plants and identifying trees. Currently growing multiple flowers, plants and trees. This summer I went wild tree hunting, potting up saplings from the forest, in preparation to bonsai.</li>
+            </ul>
+        </div>
     </section>
 </div>
 </body>

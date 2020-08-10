@@ -326,12 +326,12 @@ class CurriculumVitae:
     ]
 
 
+# @app.route("/")
+# def curriculum_vitae():
+#     return render_template("curriculum_vitae.html", cv=CurriculumVitae)
+
+
 @app.route("/")
-def curriculum_vitae():
-    return render_template("curriculum_vitae.html", cv=CurriculumVitae)
-
-
-@app.route("/index")
 def index():
     return render_template("index.html")
 
