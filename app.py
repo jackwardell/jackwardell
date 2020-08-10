@@ -39,7 +39,7 @@ class Personal:
 
 class CurriculumVitae:
     name = "Jack Wardell"
-    job_title = "Data Engineer / Software Engineer / AI Engineer"
+    job_title = "Data Engineer / Software Engineer"
     nationality = "British National"
     links = [
         ("https://www.jackwardell.co.uk", "Home"),
@@ -55,7 +55,7 @@ class CurriculumVitae:
     I believe in agile delivery and as such, that customer collaboration is key to
     developing a successful product and delivering value to both the customer and business."""
 
-    values = [
+    _values = [
         "Simplicity",
         "Courage",
         "Respect",
@@ -65,11 +65,12 @@ class CurriculumVitae:
         "Customer collaboration",
         "Feedback & adapting to change",
     ]
+    values = ", ".join(_values)
 
     looking_for = [
         "Building software mainly in Python",
         "A highly collaborative, cross-functional agile team",
-        "A non-hierarchical and physiologically safe working environment",
+        "A non-hierarchical and psychologically safe working environment",
         "An exciting product",
     ]
 
@@ -79,6 +80,12 @@ class CurriculumVitae:
         "Dedication to delivering value to the customer and therefore the business",
         "A desire for regular customer engagements",
         "Knowledge sharing / training within the team",
+    ]
+
+    specific_expertise = [
+        "Flask (have contributed 3 times to source code and have my own pip installable flask library)",
+        "SQLAlchemy & Postgres",
+        "Bootstrap4",
     ]
 
     # job history
@@ -93,7 +100,7 @@ class CurriculumVitae:
                 lines=[
                     """I changed roles in the new year into a new team but in the same product.
                     The new role is similar to my previous role as a Data Engineer, but with a greater
-                    focus on modeling, productionising data science work in kubernetes and building pipelines.""",
+                    focus on modeling, productionising machine learning work in kubernetes and building pipelines.""",
                     # "During this time I completed the Udacity course: Introduction to Machine Learning",
                 ]
             ),
@@ -111,13 +118,25 @@ class CurriculumVitae:
                     Using ScrumBan and a lean startup approach, I interacted with customers
                     weekly to understand their pain and therefore their requirements.
                     We used this instruction to build features they actually wanted.""",
+                    "Business aims:",
+                    [
+                        "To optimise internal customer decision making by applying machine learning",
+                        "To improve business decision making by 10%",
+                        "To consolidate various discrete signals from multiple sources into a single view",
+                    ],
+                    "Customer pain points:",
+                    [
+                        "I can't predict what's going to happen to X",
+                        "I don't have a clear understanding of the effects of A on X",
+                        "I can't consolidate the effects of numerous features on X into a single view",
+                    ],
                     "Delivered:",
                     [
                         "A CI/CD pipeline",
                         "Data ingestion from multiple sources and processing",
                         "Deployed models to the cloud",
                         "A website / tool frontend",
-                        "Migration from monolithic codebase to kubernetes",
+                        "Migration from monolithic codebase to microservices in kubernetes",
                     ],
                     "Skills used:",
                     [
@@ -299,11 +318,11 @@ class CurriculumVitae:
             """I enjoy growing plants and identifying trees. Currently growing
             multiple flowers, plants and trees. This summer I went wild tree hunting, potting up saplings from the forest, in preparation to bonsai.""",
         ),
-        Personal(
-            "History",
-            """I love learning and reading about history, particularly human
-            history, ancient history and English history.""",
-        ),
+        # Personal(
+        #     "History",
+        #     """I love learning and reading about history, particularly human
+        #     history, ancient history and English history.""",
+        # ),
     ]
 
 

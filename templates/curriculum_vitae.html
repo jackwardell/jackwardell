@@ -63,30 +63,33 @@
             <div class="col-sm-10">
                 <p>{{ cv.summary }}</p>
             </div>
-
-            <div class="col-md-2">
+            <div class="d-flex justify-content-end">
+                <div class="col-md-5">
+                    <p>What I'm offering:</p>
+                    <ul>
+                        {% for thing in cv.offering %}
+                            <li>{{ thing }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <p>What I'm looking for:</p>
+                    <ul>
+                        {% for thing in cv.looking_for %}
+                            <li>{{ thing }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
+        </div>
+        <div class="row d-flex justify-content-end">
             <div class="col-md-10">
-                <p>What I'm looking for:</p>
-                <ul>
-                    {% for thing in cv.looking_for %}
-                        <li>{{ thing }}</li>
-                    {% endfor %}
-                </ul>
-
-                <p>What I'm offering:</p>
-                <ul>
-                    {% for thing in cv.offering %}
-                        <li>{{ thing }}</li>
-                    {% endfor %}
-                </ul>
-
-                <p>My values:</p>
-                <ul>
-                    {% for value in cv.values %}
-                        <li>{{ value }}</li>
-                    {% endfor %}
-                </ul>
+                <p>My values: {{ cv.values }}</p>
+                {#                <ul>#}
+                {#                    {% for value in cv.values %}#}
+                {#                        <li>{{ value }}</li>#}
+                {#                    {% endfor %}#}
+                {#                </ul>#}
             </div>
             {#            <div class="col-md-2">#}
             {#                What I'm looking for#}
