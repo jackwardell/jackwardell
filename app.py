@@ -331,5 +331,10 @@ def curriculum_vitae():
     return render_template("curriculum_vitae.html", cv=CurriculumVitae)
 
 
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

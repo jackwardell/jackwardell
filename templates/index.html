@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jack Wardell CV</title>
+    <link rel="shortcut icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for("static", filename="img/favicon.ico") }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="col-12">
+        <div class="header">
+            <div class="text-center">
+                <h1 class="special-font">Jack Wardell</h1>
+                <h4 class="special-font">Data Engineer / Software Engineer</h4>
+            </div>
+            <div class="text-center">
+                <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
+            </div>
+            <div class="text-center">
+                CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="nav-scroller my-0">
+        <nav class="nav d-flex justify-content-between my-0">
+            <a class="p-2" target="_blank" href="https://www.jackwardell.co.uk">Home</a>
+            <a class="p-2" target="_blank" href="https://github.com/jackwardell">GitHub</a>
+            <a class="p-2" target="_blank" href="https://www.linkedin.com/in/jack-wardell-london/">LinkedIn</a>
+            <a class="p-2" target="_blank" href="https://www.antipodecoefficient.com/">Antipode Coefficient</a>
+        </nav>
+    </div>
+    <hr>
+    <section>
+        <h5 class="section-title">Profile</h5>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>One-liner</i></h6>
+            <p>I am an enthusiastic software developer who genuinely derives
+                pleasure from learning and building, and am motivated by an innate
+                curiosity and a desire to master my technologies.</p>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>About me</i></h6>
+            <ul>
+                <li class="my-2">Python developer and software engineer - specialising in data engineering (e.g. Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres)</li>
+                <li class="my-2">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask</li>
+                <li class="my-2">Lots of experience in data ingestion (e.g. scraping, REST APIs, etc), mission-critical applications, end-to-end testing (e.g. Selenium), CI/CD and microservices</li>
+                <li class="my-2">Extensive knowledge of Agile frameworks (e.g. Kanban, SCRUM, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
+                <li class="my-2">Values: simplicity, courage, respect, compassion, curiosity, transparency, customer collaboration, feedback & adapting to change</li>
+            </ul>
+        </div>
+        <div class="my-3">
+            <h6 class="section-subtitle"><i>What I'm looking for</i></h6>
+            <ul>
+                <li class="my-2">Building software mainly in Python</li>
+                <li class="my-2">Being able to deliver value to the customer and business</li>
+                <li class="my-2">A highly collaborative, cross-functional agile team</li>
+                <li class="my-2">A non-hierarchical and psychologically safe working environment</li>
+            </ul>
+        </div>
+    </section>
+    <section class="my-5">
+        <h5 class="section-title">Employment History</h5>
+        <ul>
+            <li class="py-2">AI Engineer at Shell, Dec 2019 - Present, London
+                <ul>
+                    <li class="my-1">Role: On-site consultant AI engineer</li>
+                </ul>
+            </li>
+            <li class="py-2">Data Engineer at Shell, June 2018 - Dec 2019, London
+                <ul>
+                    <li class="my-1">Role: On-site consultant data engineer, joined the team at the inception of the product</li>
+                    <li class="my-1">Team: ScrumBan Agile team, using lean start-up approach with weekly customer collaboration</li>
+                    <li class="my-1">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
+                    <li class="my-1">Delivered:
+                        <ul>
+                            <li>Version control & CI/CD pipeline</li>
+                            <li>Data ingestion from multiple sources, processing & storage</li>
+                            <li>Machine learning models, deployed on Azure</li>
+                            <li>A mission-critical advanced web application</li>
+                            <li>Migration of monolithic codebase to microservices in kubernetes</li>
+                        </ul>
+                    </li>
+                    <li class="my-1">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, SCRUM, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT, RFT</li>
+                    <li class="my-1">Internally awarded prizes within Shell: Code Masters Award, Downstream Directors Award, Chemicals: Increasing profitability in our base business</li>
+                </ul>
+            </li>
+            <li class="py-2">Big Data Engineer at Kubrick Group, Feb 2018 - Present, London
+                <ul>
+                    <li class="my-1">Role: Rigorously trained on-site in the discipline of big data engineering. In this bootcamp I learnt technical, business and soft skills</li>
+                    <li class="my-1">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section class="my-5">
+
+    </section>
+</div>
+</body>
+</html>
