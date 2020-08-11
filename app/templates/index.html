@@ -31,9 +31,11 @@
             <div class="text-center">
                 <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
             </div>
-            <div class="text-center">
-                CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a>
-            </div>
+            {% if pdf %}
+                <div class="text-center">
+                    CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a>
+                </div>
+            {% endif %}
         </div>
     </div>
     <hr>
@@ -61,35 +63,34 @@
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle">Skill summary</h6>
+            <h6 class="section-subtitle">Summary</h6>
             <ul>
-                <li class="my-2">Python developer and software engineer - specialising in data engineering (e.g. Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres)</li>
-                <li class="my-2">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask {% if pdf %}(<a href="https://github.com/jackwardell">https://github.com/jackwardell</a>){% endif %}</li>
-                <li class="my-2">Lots of experience in data ingestion (e.g. scraping, REST APIs, etc), mission-critical applications, end-to-end testing (e.g. Selenium), CI/CD and microservices</li>
-                <li class="my-2">Extensive knowledge of agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
-                <li class="my-2">Hands on experience with business oriented technologies: Azure, AWS, Tableau, PowerBI, Alteryx, Streamsets, etc</li>
-                <li class="my-2">Values: simplicity, courage, respect, compassion, curiosity, transparency, customer collaboration, feedback & adapting to change</li>
+                <li class="my-1">Python developer and software engineer - specialising in data engineering (e.g. Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres)</li>
+                <li class="my-1">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask {% if pdf %}(<a href="https://github.com/jackwardell">https://github.com/jackwardell</a>){% endif %}</li>
+                <li class="my-1">Lots of experience in data ingestion (e.g. scraping, REST APIs, etc), mission-critical applications, TDD, end-to-end testing (e.g. Selenium), CI/CD and microservices</li>
+                <li class="my-1">Extensive knowledge of agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
+                <li class="my-1">Hands on experience with business oriented technologies: Azure, AWS, Tableau, PowerBI, Alteryx, Streamsets, Heroku, etc</li>
+                <li class="my-1">Values: simplicity, courage, respect, compassion, curiosity, transparency, customer collaboration, feedback & adapting to change</li>
             </ul>
         </div>
         <div class="my-3">
             <h6 class="section-subtitle">Looking for</h6>
             <ul>
-                <li class="my-2">Building software mainly in Python</li>
-                <li class="my-2">Being able to deliver value to the customer and business</li>
-                <li class="my-2">A highly collaborative, cross-functional agile team</li>
-                <li class="my-2">A non-hierarchical and psychologically safe working environment</li>
+                <li class="my-1">Building software mainly in Python</li>
+                <li class="my-1">Being able to deliver value to the customer and business</li>
+                <li class="my-1">A highly collaborative, cross-functional agile team</li>
+                <li class="my-1">A non-hierarchical and psychologically safe working environment</li>
             </ul>
         </div>
     </section>
-
-    <section class="my-5">
+    <hr>
+    <section class="my-4">
         <h5 class="section-title">Employment History</h5>
         <div class="my-3">
             <h6 class="section-subtitle">AI Engineer at Shell: <span class="sub-subtitle">Dec 2019 - Present, London</span></h6>
             <ul>
-                <li class="my-1">Role: Promotion from previous role after extensive training in machine learning (e.g Udacity)</li>
-                <li class="my-1">Team: Stayed in the same team as I was committed to delivering OKRs and loyal to my colleagues</li>
-                <li class="my-2">Delivered:
+                <li class="my-1">Role: Promotion from previous role after extensive training in machine learning (e.g. Udacity), in the same team</li>
+                <li class="my-1">Delivered:
                     <ul>
                         <li>Ad-hoc model creation in kubernetes</li>
                         <li>Feature selection, hyperparameter tuning and model optimisation in the cloud</li>
@@ -97,16 +98,15 @@
                         <li>Migration of monolithic codebase to microservices in kubernetes</li>
                     </ul>
                 </li>
-                <li class="my-2">Stack: (as well as below), Kubernetes, Celery</li>
+                <li class="my-1">Stack: (as well as below), Kubernetes, Celery</li>
             </ul>
         </div>
         <div class="my-3">
             <h6 class="section-subtitle">Data Engineer at Shell: <span class="sub-subtitle">June 2018 - Dec 2019, London</span></h6>
             <ul>
-                <li class="my-2">Role: On-site consultant data engineer</li>
-                <li class="my-2">Team: ScrumBan agile team, using lean start-up approach with weekly customer collaboration. Joined at inception 2+ years ago</li>
-                <li class="my-2">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
-                <li class="my-2">Delivered:
+                <li class="my-1">Role: On-site consultant data engineer in ScrumBan agile team, using lean start-up approach with weekly customer collaboration</li>
+                <li class="my-1">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
+                <li class="my-1">Delivered:
                     <ul>
                         <li>Version control & CI/CD pipeline</li>
                         <li>Data ingestion from multiple sources, processing & storage</li>
@@ -114,21 +114,21 @@
                         <li>A mission-critical advanced web application</li>
                     </ul>
                 </li>
-                <li class="my-2">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Docker, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, SCRUM, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT, RFT</li>
-                <li class="my-2">Internally awarded prizes within Shell: Code Masters Award, Downstream Directors Award, Chemicals: Increasing profitability in our base business</li>
+                <li class="my-1">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Docker, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, Scrum, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT, RFT</li>
+                <li class="my-1">Internally awarded prizes within Shell: Code Masters Award, Downstream Directors Award, Increasing Profitability In The Base Business Award</li>
             </ul>
         </div>
         <div class="my-3">
             <h6 class="section-subtitle">Big Data Engineer at Kubrick Group: <span class="sub-subtitle">Feb 2018 - Present, London</span></h6>
             <ul>
-                <li class="my-2">Role: Rigorously trained on-site in the discipline of big data engineering. In this bootcamp I learnt technical, business and soft skills</li>
-                <li class="my-2">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
+                <li class="my-1">Role: Rigorously trained on-site in the discipline of big data engineering, learning technical, business and soft skills</li>
+                <li class="my-1">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
                 </li>
             </ul>
         </div>
     </section>
-
-    <section class="my-5">
+    <hr>
+    <section class="my-4">
         <h5 class="section-title">Education</h5>
         <div class="my-3">
             <h6 class="section-subtitle">Chemistry MSci at UCL: <span class="sub-subtitle">London</span></h6>
@@ -146,13 +146,16 @@
             </ul>
         </div>
     </section>
-
-    <section class="my-5">
+    <hr>
+    <section class="my-4">
         <h5 class="section-title">Skills</h5>
         <div class="my-3">
             <h6 class="section-subtitle">Key Skills:</h6>
             <ul>
-                <li class="my-1">Data Engineering, Software Engineering, AI/ML Engineering, Full Stack Development, Data Analysis, Data Modelling, Machine Learning, Data Ingestion, Back End Engineering, Front End Engineering</li>
+                <li class="my-1">Data engineering: data ingestion, data pipelines, AI/ML engineering, data analysis, data modelling & machine learning</li>
+                <li class="my-1">Software engineering: full stack development (back end & frond end engineering), TDD, SOLID, APIs & design</li>
+                <li class="my-1">Agile & other methodologies: Scrum, Kanban, Lean, XP, OKRs, mutual learning, DevOps</li>
+                <li class="my-1">Other: chemistry, public speaking, trading, cryptos</li>
             </ul>
         </div>
         <div class="my-3">
@@ -164,35 +167,18 @@
         <div class="my-3">
             <h6 class="section-subtitle">Frameworks, Libraries & Technologies:</h6>
             <ul>
-                <li class="my-1">Flask, JQuery, Bootstrap4, Jinja2, Pandas, Numpy, Scikit-learn, SQLAlchemy, Postgres</li>
-            </ul>
-        </div>
-        <div class="my-3">
-            <h6 class="section-subtitle">Software Engineering:</h6>
-            <ul>
-                <li class="my-1">TDD, SOLID, APIs, Linux, Git, Docker, AWS, Azure, Heroku, Kubernetes</li>
-            </ul>
-        </div>
-        <div class="my-3">
-            <h6 class="section-subtitle">Agile & Other Methodologies:</h6>
-            <ul>
-                <li class="my-1">Scrum, Kanban, Lean Startup, XP, OKR, Mutual Learning, DevOps</li>
-            </ul>
-        </div>
-        <div class="my-3">
-            <h6 class="section-subtitle">Other skills:</h6>
-            <ul>
-                <li class="my-1">Chemistry, Public Speaking</li>
+                <li class="my-1">Flask, JQuery, Bootstrap4, Jinja2, Pandas, Numpy, Scikit-learn, SQLAlchemy, Postgres, Docker, Git, Click</li>
             </ul>
         </div>
     </section>
-    <section class="my-5">
+    <hr>
+    <section class="my-4">
         <h5 class="section-title">Personal</h5>
         <div class="my-3">
             <h6 class="section-subtitle">Antipode coefficent:</h6>
             <ul>
-                <li class="my-1">Built a small website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe {% if pdf %}(<a href="https://www.antipodecoefficient.com/">https://www.antipodecoefficient.com/</a>){% endif %}</li>
-                <li class="my-1">Stack: Flask, SQLAlchemy, Alembic, PostgreSQL, Heroku, Mapbox, geopy, gunicorn, click, Bootstrap4, pytest, TDD, Github, JQuery</li>
+                <li class="my-1">Built a website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe {% if pdf %}(<a href="https://www.antipodecoefficient.com/">https://www.antipodecoefficient.com/</a>){% endif %}</li>
+                <li class="my-1">Stack: Flask, SQLAlchemy, Alembic, PostgreSQL, Heroku, Mapbox, GeoPy, GeoJSON, Gunicorn, Click, Bootstrap4, pytest, TDD, GitHub, JQuery</li>
             </ul>
         </div>
         <div class="my-3">
@@ -211,7 +197,7 @@
         <div class="my-3">
             <h6 class="section-subtitle">Gardening, botany, horticulture & bonsai:</h6>
             <ul>
-                <li class="my-1">I enjoy growing plants and identifying trees. Currently growing multiple flowers, plants and trees. This summer I went wild tree hunting, potting up saplings from the forest, in preparation to bonsai.</li>
+                <li class="my-1">I enjoy growing plants and identifying trees. This summer I have been potting up saplings in preparation for bonsai</li>
             </ul>
         </div>
     </section>
