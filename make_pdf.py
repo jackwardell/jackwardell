@@ -11,5 +11,8 @@ if __name__ == "__main__":
     )
     thread = threading.Thread(target=flask.run, daemon=True)
     thread.start()
-    pdfkit.from_url(f"http://{HOST}:{PORT}/?for_pdf=True", "JACK_WARDELL_CV.pdf")
-    thread.join()
+    pdfkit.from_url(
+        f"http://{HOST}:{PORT}/?for_pdf=True",
+        "JACK_WARDELL_CV.pdf",
+        options={"zoom": 0.95},
+    )
