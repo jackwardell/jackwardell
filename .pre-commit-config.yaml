@@ -27,3 +27,13 @@ repos:
       - id: check-byte-order-marker
       - id: trailing-whitespace
       - id: end-of-file-fixer
+
+  - repo: local
+    hooks:
+      - id: make-pdf
+        name: make-pdf
+        entry: python make_pdf.py
+        language: python
+        additional_dependencies: [commandlib, pdfkit, GitPython]
+        types: [python]
+        pass_filenames: false

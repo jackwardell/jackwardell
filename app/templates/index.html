@@ -14,6 +14,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
+{% if request.args.get("for_pdf") == "True" %}
+    {% set pdf = true %}
+{% else %}
+    {% set pdf = false %}
+{% endif %}
+
 <body>
 <div class="container">
     <div class="col-12">
@@ -31,40 +37,42 @@
         </div>
     </div>
     <hr>
-    <div class="nav-scroller my-0">
-        <nav class="nav d-flex justify-content-between my-0">
-            <a class="p-2" target="_blank" href="https://www.jackwardell.co.uk">Home</a>
-            <a class="p-2" target="_blank" href="https://github.com/jackwardell">GitHub</a>
-            <a class="p-2" target="_blank" href="https://www.linkedin.com/in/jack-wardell-london/">LinkedIn</a>
-            <a class="p-2" target="_blank" href="https://www.antipodecoefficient.com/">Antipode Coefficient</a>
-        </nav>
-    </div>
-    <hr>
+    {% if not pdf %}
+        <div class="nav-scroller my-0">
+            <nav class="nav d-flex justify-content-between my-0">
+                <a class="p-2" target="_blank" href="https://www.jackwardell.co.uk">Home</a>
+                <a class="p-2" target="_blank" href="https://github.com/jackwardell">GitHub</a>
+                <a class="p-2" target="_blank" href="https://www.linkedin.com/in/jack-wardell-london/">LinkedIn</a>
+                <a class="p-2" target="_blank" href="https://www.antipodecoefficient.com/">Antipode Coefficient</a>
+            </nav>
+        </div>
+        <hr>
+    {% endif %}
+
     <section>
-        <h5 class="section-title"><strong>Profile</strong></h5>
+        <h5 class="section-title">Profile</h5>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>One-liner</i></h6>
-            <ul>
-                <li>I am an enthusiastic software developer who genuinely derives
-                    pleasure from learning and building, and am motivated by an innate
+            <h6 class="section-subtitle">One-liner</h6>
+            <ul style="list-style-type: none;">
+                <li>I am a resourceful and enthusiastic software developer who genuinely
+                    enjoys learning and building, and am motivated by an innate
                     curiosity and a desire to master my technologies.
                 </li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>About me</i></h6>
+            <h6 class="section-subtitle">Skill summary</h6>
             <ul>
                 <li class="my-2">Python developer and software engineer - specialising in data engineering (e.g. Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres)</li>
-                <li class="my-2">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask</li>
+                <li class="my-2">Open source developer: packages on pip, numerous projects and repos on GitHub and contributions to open source libraries like Flask {% if pdf %}(<a href="https://github.com/jackwardell">https://github.com/jackwardell</a>){% endif %}</li>
                 <li class="my-2">Lots of experience in data ingestion (e.g. scraping, REST APIs, etc), mission-critical applications, end-to-end testing (e.g. Selenium), CI/CD and microservices</li>
-                <li class="my-2">Extensive knowledge of Agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
-                {#                <li class="my-2">Proponent of end-to-end testing, TDD, DDD, kanban & mutual learning</li>#}
+                <li class="my-2">Extensive knowledge of agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs, DevOps & mutual learning</li>
                 <li class="my-2">Hands on experience with business oriented technologies: Azure, AWS, Tableau, PowerBI, Alteryx, Streamsets, etc</li>
                 <li class="my-2">Values: simplicity, courage, respect, compassion, curiosity, transparency, customer collaboration, feedback & adapting to change</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>What I'm looking for</i></h6>
+            <h6 class="section-subtitle">Looking for</h6>
             <ul>
                 <li class="my-2">Building software mainly in Python</li>
                 <li class="my-2">Being able to deliver value to the customer and business</li>
@@ -73,10 +81,11 @@
             </ul>
         </div>
     </section>
+
     <section class="my-5">
-        <h5 class="section-title"><strong>Employment History</strong></h5>
+        <h5 class="section-title">Employment History</h5>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>AI Engineer at Shell:</i> Dec 2019 - Present, London</h6>
+            <h6 class="section-subtitle">AI Engineer at Shell: <span class="sub-subtitle">Dec 2019 - Present, London</span></h6>
             <ul>
                 <li class="my-1">Role: Promotion from previous role after extensive training in machine learning (e.g Udacity)</li>
                 <li class="my-1">Team: Same team</li>
@@ -84,7 +93,7 @@
                     <ul>
                         <li>Ad-hoc model creation in kubernetes</li>
                         <li>Feature selection, hyperparameter tuning and model optimisation in the cloud</li>
-                        <li>A self-service mission critical application that allows users to build machine learning models with a UI</li>
+                        <li>A self-service Flask webapp that allows users to build machine learning models with a UI</li>
                         <li>Migration of monolithic codebase to microservices in kubernetes</li>
                     </ul>
                 </li>
@@ -92,10 +101,10 @@
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Data Engineer at Shell:</i> June 2018 - Dec 2019, London</h6>
+            <h6 class="section-subtitle">Data Engineer at Shell: <span class="sub-subtitle">June 2018 - Dec 2019, London</span></h6>
             <ul>
                 <li class="my-2">Role: On-site consultant data engineer</li>
-                <li class="my-2">Team: ScrumBan Agile team, using lean start-up approach with weekly customer collaboration. Joined at inception 2+ years ago</li>
+                <li class="my-2">Team: ScrumBan agile team, using lean start-up approach with weekly customer collaboration. Joined at inception 2+ years ago</li>
                 <li class="my-2">Business Aim: To optimise internal customer decision making by applying machine learning to various discrete signals from multiple sources</li>
                 <li class="my-2">Delivered:
                     <ul>
@@ -110,7 +119,7 @@
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Big Data Engineer at Kubrick Group:</i> Feb 2018 - Present, London</h6>
+            <h6 class="section-subtitle">Big Data Engineer at Kubrick Group: <span class="sub-subtitle">Feb 2018 - Present, London</span></h6>
             <ul>
                 <li class="my-2">Role: Rigorously trained on-site in the discipline of big data engineering. In this bootcamp I learnt technical, business and soft skills</li>
                 <li class="my-2">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel
@@ -118,82 +127,89 @@
             </ul>
         </div>
     </section>
+
     <section class="my-5">
-        <h5 class="section-title"><strong>Education</strong></h5>
+        <h5 class="section-title">Education</h5>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>UCL:</i> 2.1 Chemistry MSci, London</h6>
+            <h6 class="section-subtitle">Chemistry MSci at UCL: <span class="sub-subtitle">London</span></h6>
             <ul>
                 <li class="my-1">3rd Year dissertation on ‘Structural Defects in Metal–Organic Frameworks’ under Prof. Ben Slater</li>
                 <li class="my-1">4th Year advanced chemical project on ‘Synthesis and Study of Exotic Magnets – Engineering New Quantum States’ under Prof. Andrew Wills</li>
+                <li>Overall grade: 2.1</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Abingdon School:</i> Chemistry A*, Maths A*, Further Maths B, Art A, Oxford</h6>
+            <h6 class="section-subtitle">Abingdon School: <span class="sub-subtitle">Oxford</span></h6>
+            <ul>
+                <li>A-levels: Chemistry A*, Maths A*, Further Maths B, Art A</li>
+                <li>GCSEs: 11 A* - A</li>
+            </ul>
         </div>
     </section>
+
     <section class="my-5">
-        <h5 class="section-title"><strong>Skills</strong></h5>
+        <h5 class="section-title">Skills</h5>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Key Skills:</i></h6>
+            <h6 class="section-subtitle">Key Skills:</h6>
             <ul>
                 <li class="my-1">Data Engineering, Software Engineering, AI/ML Engineering, Full Stack Development, Data Analysis, Data Modelling, Machine Learning, Data Ingestion, Back End Engineering, Front End Engineering</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Languages:</i></h6>
+            <h6 class="section-subtitle">Languages:</h6>
             <ul>
                 <li class="my-1">Python, SQL, HTML, CSS, Javascript</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Frameworks & Libraries:</i></h6>
+            <h6 class="section-subtitle">Frameworks, Libraries & Technologies:</h6>
             <ul>
-                <li class="my-1">Flask, JQuery, Vue.js, Bootstrap4, Jinja2, Pandas, Numpy, Scikit-learn</li>
+                <li class="my-1">Flask, JQuery, Bootstrap4, Jinja2, Pandas, Numpy, Scikit-learn, SQLAlchemy, Postgres</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Software Engineering:</i></h6>
+            <h6 class="section-subtitle">Software Engineering:</h6>
             <ul>
                 <li class="my-1">TDD, SOLID, APIs, Linux, Git, Docker, AWS, Azure, Heroku, Kubernetes</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Agile & Other Methodologies:</i></h6>
+            <h6 class="section-subtitle">Agile & Other Methodologies:</h6>
             <ul>
                 <li class="my-1">Scrum, Kanban, Lean Startup, XP, OKR, Mutual Learning, DevOps</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Other skills:</i></h6>
+            <h6 class="section-subtitle">Other skills:</h6>
             <ul>
                 <li class="my-1">Chemistry, Public Speaking</li>
             </ul>
         </div>
     </section>
     <section class="my-5">
-        <h5 class="section-title"><strong>Personal</strong></h5>
+        <h5 class="section-title">Personal</h5>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Antipode coefficent:</i></h6>
+            <h6 class="section-subtitle">Antipode coefficent:</h6>
             <ul>
-                <li class="my-1">Built a small website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe</li>
+                <li class="my-1">Built a small website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe {% if pdf %}(<a href="https://www.antipodecoefficient.com/">https://www.antipodecoefficient.com/</a>){% endif %}</li>
                 <li class="my-1">Stack: Flask, SQLAlchemy, Alembic, PostgreSQL, Heroku, Mapbox, geopy, gunicorn, click, Bootstrap4, pytest, TDD, Github, JQuery</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Udacity course on machine learning:</i></h6>
+            <h6 class="section-subtitle">Udacity course on machine learning:</h6>
             <ul>
                 <li class="my-1">Completed multiple projects on supervised and unsupervised learning, with sklearn and pytorch</li>
                 <li class="my-1">Stack: Ensemble models, Bayesian models, SVMs, Image classifiers, PCA, scikit-learn, pytorch, matplotlib, seaborn, pandas, numpy</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Open source contributor:</i></h6>
+            <h6 class="section-subtitle">Open source contributor:</h6>
             <ul>
-                <li class="my-1">A few packages on pip, contributions to Flask, many repos and projects on GitHub</li>
+                <li class="my-1">A few packages on pip, contributions to Flask, many repos and projects on GitHub {% if pdf %}(<a href="https://github.com/jackwardell">https://github.com/jackwardell</a>){% endif %}</li>
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle"><i>Gardening, botany, horticulture & bonsai:</i></h6>
+            <h6 class="section-subtitle">Gardening, botany, horticulture & bonsai:</h6>
             <ul>
                 <li class="my-1">I enjoy growing plants and identifying trees. Currently growing multiple flowers, plants and trees. This summer I went wild tree hunting, potting up saplings from the forest, in preparation to bonsai.</li>
             </ul>

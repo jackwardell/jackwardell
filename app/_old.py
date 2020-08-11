@@ -1,9 +1,3 @@
-from flask import Flask
-from flask import render_template
-
-app = Flask(__name__)
-
-
 class Description:
     def __init__(self, lines):
         self.lines = lines
@@ -329,12 +323,3 @@ class CurriculumVitae:
 # @app.route("/")
 # def curriculum_vitae():
 #     return render_template("curriculum_vitae.html", cv=CurriculumVitae)
-
-
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")

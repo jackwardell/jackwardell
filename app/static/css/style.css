@@ -1,0 +1,18 @@
+body {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+}
+
+.section-subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.sub-subtitle {
+    font-style: italic;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
