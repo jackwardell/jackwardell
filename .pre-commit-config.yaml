@@ -37,3 +37,4 @@ repos:
         additional_dependencies: [commandlib, pdfkit, GitPython]
         types: [python]
         pass_filenames: false
+        always_run: true
