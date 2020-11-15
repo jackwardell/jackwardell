@@ -25,27 +25,26 @@
             <div class="text-center">
                 <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
             </div>
-            {% if request.args.get("for_pdf") == "True" %}
-                <div class="d-flex justify-content-around">
-                    <span>GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></span>
-                    <span>CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></span>
-                    <span>LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jack-wardell</a></span>
-                </div>
-            {% endif %}
         </div>
     </div>
     <hr>
-    {% if not pdf %}
+    {% if not request.args.get("for_pdf") == "True" %}
         <div class="nav-scroller my-0">
             <nav class="nav d-flex justify-content-between my-0">
                 <a class="p-2" target="_blank" href="https://github.com/jackwardell">GitHub</a>
-                <a class="p-2" target="_blank" href="https://www.linkedin.com/in/jack-wardell/">LinkedIn</a>
+                <a class="p-2" target="_blank" href="https://www.linkedin.com/in/jackwardell/">LinkedIn</a>
                 <a class="p-2" target="_blank" href="https://www.antipodecoefficient.com/">Antipode Coefficient</a>
                 <a class="p-2" target="_blank" href="https://github.com/jackwardell/jackwardell/raw/master/JACK_WARDELL_CV.pdf">Download PDF</a>
             </nav>
         </div>
-        <hr>
+    {% else %}
+        <div class="d-flex justify-content-between">
+            <span>GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></span>
+            <span>LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jackwardell</a></span>
+            <span>CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></span>
+        </div>
     {% endif %}
+    <hr>
 
     <section>
         <h5 class="section-title">Profile</h5>
@@ -69,7 +68,7 @@
         <div class="my-3">
             <h6 class="section-subtitle">Looking for</h6>
             <ul>
-                <li class="my-1">Being able to deliver value to the customer and business</li>
+                <li class="my-1">The ability to deliver value to the customer and business</li>
                 <li class="my-1">Exciting new challenges</li>
                 <li class="my-1">A highly collaborative, cross-functional agile team</li>
                 <li class="my-1">A non-hierarchical and psychologically safe working environment</li>
@@ -107,7 +106,7 @@
                     </ul>
                 </li>
                 <li class="my-1">Stack: Python, Flask, SQLAlchemy, Pandas, Numpy, Sklearn, Git, Docker, Jenkins, Azure, Postgres, Redis, Blob, HTML, CSS, Jinja2, Javascript, JQuery, Bootstrap4, Kubernetes, Celery, Scrum, Kanban, Lean Startup, Mutual Learning, Jira, Slack, ACT and RFT</li>
-                <li class="my-1">Internally awarded prizes within Shell: 'Code Masters Award', 'Downstream Directors Award' and the 'Increasing Profitability In The Base Business Award'</li>
+                <li class="my-1">Internally awarded prizes within Shell: ‘Code Masters Award’, ‘Downstream Directors Award’ and the ‘Increasing Profitability In The Base Business Award’</li>
             </ul>
         </div>
         <div class="my-3">
@@ -146,7 +145,7 @@
                 <li class="my-1">Data engineering: data ingestion, data pipelines, AI/ML engineering, data analysis, data modelling and machine learning</li>
                 <li class="my-1">Software engineering: back end & frond end engineering, databases, TDD, SOLID, APIs and design</li>
                 <li class="my-1">Agile & other methodologies: Scrum, Kanban, Lean, XP, OKRs, mutual learning and DevOps</li>
-                <li class="my-1">Other: chemistry, maths, Microsoft Office, public speaking and trading</li>
+                <li class="my-1">Other: chemistry, maths, Microsoft Office, public speaking, tree identification and trading</li>
             </ul>
         </div>
         <div class="my-3">
