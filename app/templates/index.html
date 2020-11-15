@@ -14,12 +14,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
-{% if request.args.get("for_pdf") == "True" %}
-    {% set pdf = true %}
-{% else %}
-    {% set pdf = false %}
-{% endif %}
-
 <body>
 <div class="container">
     <div class="col-12">
@@ -31,9 +25,11 @@
             <div class="text-center">
                 <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
             </div>
-            {% if pdf %}
-                <div class="text-center">
-                    CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a>
+            {% if request.args.get("for_pdf") == "True" %}
+                <div class="d-flex justify-content-around">
+                    <span>GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></span>
+                    <span>CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></span>
+                    <span>LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jack-wardell</a></span>
                 </div>
             {% endif %}
         </div>
@@ -62,8 +58,8 @@
         <div class="my-3">
             <h6 class="section-subtitle">Summary</h6>
             <ul>
-                <li class="my-1">Python developer and software engineer - specialising in data engineering (e.g. SQL, Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, SQLAlchemy, Postgres, Docker)</li>
-                <li class="my-1">Open source developer: packages on pip, many projects and repos on GitHub and contributions to open source libraries like Flask {% if pdf %}(<a href="https://github.com/jackwardell">https://github.com/jackwardell</a>){% endif %}</li>
+                <li class="my-1">Python developer and software engineer - specialising in data engineering (e.g. SQL, Pandas, Numpy, Sklearn) and full stack web development (e.g. Flask, Bootstrap4, JQuery, SQLAlchemy, Postgres, Docker)</li>
+                <li class="my-1">Open source developer: packages on pip, many projects and repos on GitHub and contributions to open source libraries like Flask</li>
                 <li class="my-1">Technical experience in: data ingestion (e.g. scraping, websockets, APIs), databases (e.g. PostgreSQL, Redis), mission-critical applications, webdev, REST APIs, TDD, end-to-end testing (e.g. Selenium), DevOps & CI/CD, diagnostics, Docker and microservices</li>
                 <li class="my-1">Extensive knowledge of: agile frameworks (e.g. Kanban, Scrum, XP), the lean startup approach, OKRs and mutual learning</li>
                 <li class="my-1">Hands-on experience with cloud and other technologies: Azure, AWS, Heroku, Tableau, PowerBI, Alteryx, Streamsets and GitHub</li>
@@ -118,7 +114,7 @@
             <h6 class="section-subtitle">Big Data Engineer at Kubrick Group: <span class="sub-subtitle">Feb 2018 - Present, London</span></h6>
             <ul>
                 <li class="my-1">Role: Rigorously trained on-site for 4 months in the discipline of big data engineering; learning technical, business and soft skills</li>
-                <li class="my-1">Stack: Python, SQL (T-SQL, Microsoft SQL Server), NoSQL (MongoDB), Spark (Hadoop, Hive), Excel, GDPR and data security
+                <li class="my-1">Stack: Python, SQL (e.g. T-SQL, Microsoft SQL Server), NoSQL (e.g. MongoDB), Spark (e.g. Hadoop, Hive), Excel, GDPR and data security
                 </li>
             </ul>
         </div>
@@ -138,7 +134,6 @@
             <h6 class="section-subtitle">Abingdon School: <span class="sub-subtitle">Oxford</span></h6>
             <ul>
                 <li>A-levels: Chemistry A*, Maths A*, Further Maths B, Art A</li>
-                {#                <li>GCSEs: 11 A* - A</li>#}
             </ul>
         </div>
     </section>
@@ -163,14 +158,14 @@
     </section>
     <hr>
     <section class="my-4">
-        <h5 class="section-title">Personal</h5>
+        <h5 class="section-title">Other</h5>
         <div class="my-3">
             <h6 class="section-subtitle">Projects:</h6>
             <ul>
                 <li class="my-1">
                     Antipode Coefficient (<a href="https://www.antipodecoefficient.com/">https://www.antipodecoefficient.com/</a>)
                     <ul>
-                        <li class="my-1">Built a website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe {% if pdf %}(<a href="https://www.antipodecoefficient.com/">https://www.antipodecoefficient.com/</a>){% endif %}</li>
+                        <li class="my-1">Built a website to calculate the antipode coefficient between two points. The basic idea is that two points can be described with a number between 0 and 1, where 1 represents a place being perfectly opposite on the globe</li>
                         <li class="my-1">Stack: Flask, SQLAlchemy, Alembic, PostgreSQL, Heroku, Mapbox, GeoPy, GeoJSON, Gunicorn, Click, Bootstrap4, pytest, TDD, GitHub and JQuery</li>
                     </ul>
                 </li>
@@ -189,7 +184,7 @@
             </ul>
         </div>
         <div class="my-3">
-            <h6 class="section-subtitle">Other:</h6>
+            <h6 class="section-subtitle">Learning:</h6>
             <ul>
                 <li class="my-1">
                     Machine Learning - Udacity
@@ -199,9 +194,9 @@
                     </ul>
                 </li>
                 <li class="my-1">Accelerated Computer Science Fundamentals Specialization - University OF Illinois at Urbana-Champaign (through Coursera)
-                    <ul>
-                        <li>Working through the content for potential CS Masters</li>
-                    </ul>
+                    {#                    <ul>#}
+                    {#                        <li>Working through the content for potential CS Masters</li>#}
+                    {#                    </ul>#}
                 </li>
                 <li class="my-1">Easy to Advanced Data Structures - William Fiset (through Udemy)</li>
             </ul>
