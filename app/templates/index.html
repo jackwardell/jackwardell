@@ -22,9 +22,11 @@
                 <h1 class="special-font">Jack Wardell</h1>
                 <h4 class="special-font">Data Engineer / Software Engineer</h4>
             </div>
-            <div class="text-center">
-                <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
-            </div>
+            {% if not request.args.get("for_pdf") == "True" %}
+                <div class="text-center">
+                    <img src="{{ url_for("static", filename="img/cv_img.jpg") }}" class="rounded-circle mb-3" alt="..." width="100" height="100">
+                </div>
+            {% endif %}
         </div>
     </div>
     <hr>
@@ -38,10 +40,10 @@
             </nav>
         </div>
     {% else %}
-        <div class="d-flex justify-content-between">
-            <span>GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></span>
-            <span>LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jackwardell</a></span>
-            <span>CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></span>
+        <div class="text-center">
+            <p class="p-0 m-0">GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></p>
+            <p class="p-0 m-0">LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jackwardell</a></p>
+            <p class="p-0 m-0">CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></p>
         </div>
     {% endif %}
     <hr>
