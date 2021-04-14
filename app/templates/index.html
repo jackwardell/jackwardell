@@ -44,7 +44,7 @@
     {% else %}
         <div class="text-center">
             <p class="p-0 m-0">Email @ <a class="p-0 m-0" href="mailto:jackwardell@me.com">jackwardell@me.com</a></p>
-            <p class="p-0 m-0">CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></p>
+{#            <p class="p-0 m-0">CV @ <a href="https://www.jackwardell.co.uk">https://www.jackwardell.co.uk</a></p>#}
             <p class="p-0 m-0">GitHub @ <a href="https://github.com/jackwardell">https://github.com/jackwardell</a></p>
             <p class="p-0 m-0">LinkedIn @ <a href="https://www.linkedin.com/in/jack-wardell/">https://www.linkedin.com/in/jackwardell</a></p>
         </div>
@@ -69,24 +69,43 @@
                 <li class="my-1">Values: simplicity, respect, compassion, curiosity, honesty, customer collaboration, feedback and adapting to change</li>
             </ul>
         </div>
-        <div class="my-2">
-            <h6 class="section-subtitle">Looking for</h6>
-            <ul>
-                <li class="my-1">The ability to deliver value to the customer and business</li>
-                <li class="my-1">Exciting new challenges</li>
-                <li class="my-1">A highly collaborative, cross-functional agile team</li>
-                <li class="my-1">A non-hierarchical and psychologically safe working environment</li>
-                <li class="my-1">A kaizen culture</li>
-            </ul>
-        </div>
+        {#        <div class="my-2">#}
+        {#            <h6 class="section-subtitle">Looking for</h6>#}
+        {#            <ul>#}
+        {#                <li class="my-1">The ability to deliver value to the customer and business</li>#}
+        {#                <li class="my-1">Exciting new challenges</li>#}
+        {#                <li class="my-1">A highly collaborative, cross-functional agile team</li>#}
+        {#                <li class="my-1">A non-hierarchical and psychologically safe working environment</li>#}
+        {#                <li class="my-1">A kaizen culture</li>#}
+        {#            </ul>#}
+        {#        </div>#}
     </section>
     <hr>
     <section class="my-3">
         <h5 class="section-title">Employment History</h5>
         <div class="my-2">
+            <h6 class="section-subtitle">Co-founder at Mizar: <span class="sub-subtitle">Oct 2019 - Present, London</span></h6>
+            <ul>
+                <li class="my-1">Role: Chief data officer</li>
+                <li class="my-1">Business Aim: To build a cryptocurrency trading platform where quants can build algo-trading strategies which others can invest in</li>
+                <li class="my-1">Delivered:
+                    <ul>
+                        <li>All historic trades and all live trades (trades happening right now) ingested into our system from Binance</li>
+                        <li>Full CI/CD pipeline deploying microservices (e.g. Kafka, Postgres, Redis) onto AWS kubernetes (EKS)</li>
+                        <li>Live trading infrastructure built and deployed (e.g. webapp, strategy management, execution engine)</li>
+                        <li>Open-source libraries that let you build machine learning models (on top of Sklearn) and deploy them to our trading infrastructure</li>
+                        <li>A rich featured webapp that integrates with a Binance API key to allow for subscription to algo-trading strategies</li>
+                    </ul>
+                </li>
+                <li class="my-1">Stack: Python, Javascript, Flask, SQLAlchemy, Kubernetes, Docker, Postgres, Kafka, Redis, AWS (e.g. EC2, EKS, RDS)</li>
+            </ul>
+        </div>
+        <div class="my-2">
             <h6 class="section-subtitle">Backend Engineer at Monzo Bank: <span class="sub-subtitle">March 2021 - Present, London</span></h6>
             <ul>
-                <li class="my-1">Started a new role as a backend engineer building backend components for banking using Go and kubernetes</li>
+                <li class="my-1">Role: Backend engineer securely and competently building and maintaining the data platform in Monzo</li>
+{#                <li class="my-1">Business Aim: To securely and competently build out the Monzo data platform to best serve our colleagues</li>#}
+                <li class="my-1">Stack: Go, Kubernetes, Python, dbt, GCP, BigQuery</li>
             </ul>
         </div>
         <div class="my-2">
@@ -183,16 +202,16 @@
                         <li class="my-1">Built a simple, fast and intuitive python package for the Slack WebAPI</li>
                     </ul>
                 </li>
-                <li class="my-1">The Urban Goose (<a href="https://the-urban-goose.herokuapp.com/">https://the-urban-goose.herokuapp.com/</a>)
-                    <ul>
-                        <li class="my-1">Building a website for a friend to review restaurants in London with a rich map interface (in beta development — still collaborating with him)</li>
-                    </ul>
-                </li>
-                <li class="my-1">Flask Model Management (<a href="https://github.com/jackwardell/Flask-Model-Management">https://github.com/jackwardell/Flask-Model-Management</a>)
-                    <ul>
-                        <li class="my-1">Building a Flask extension that provides a UI for CRUD operations to SQLAlchemy models (in alpha development — still collecting feedback)</li>
-                    </ul>
-                </li>
+                {#                <li class="my-1">The Urban Goose (<a href="https://the-urban-goose.herokuapp.com/">https://the-urban-goose.herokuapp.com/</a>)#}
+                {#                    <ul>#}
+                {#                        <li class="my-1">Building a website for a friend to review restaurants in London with a rich map interface (in beta development — still collaborating with him)</li>#}
+                {#                    </ul>#}
+                {#                </li>#}
+                {#                <li class="my-1">Flask Model Management (<a href="https://github.com/jackwardell/Flask-Model-Management">https://github.com/jackwardell/Flask-Model-Management</a>)#}
+                {#                    <ul>#}
+                {#                        <li class="my-1">Building a Flask extension that provides a UI for CRUD operations to SQLAlchemy models (in alpha development — still collecting feedback)</li>#}
+                {#                    </ul>#}
+                {#                </li>#}
             </ul>
         </div>
         <div class="my-2">
